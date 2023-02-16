@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 86098913}
   - component: {fileID: 86098916}
   - component: {fileID: 86098917}
+  - component: {fileID: 86098918}
   m_Layer: 0
   m_Name: Enemy (shooter)
   m_TagString: Enemy
@@ -155,7 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f7f305c8e769542a7b532b8000aea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 3
   speed: 15
   yawSpeed: 15
 --- !u!212 &86098914
@@ -284,6 +284,26 @@ PolygonCollider2D:
       - {x: 0.031071946, y: -0.5097932}
       - {x: 0.1550168, y: -0.4625588}
       - {x: 0.20121358, y: -0.34320396}
+--- !u!114 &86098918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86098912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fde3339c8128347b965e22fb2fcef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  boatSprites:
+  - {fileID: -4030218682350969340, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: 8945501462872329395, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: 5454323460701076973, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: -7913083716243021763, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  frame: 0
 --- !u!1 &318955774
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +329,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318955774}
   m_Enabled: 1
-  m_CellSize: {x: 1.28, y: 1.28, z: 0}
+  m_CellSize: {x: 1.275, y: 1.275, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -3622,6 +3642,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3637,6 +3658,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5813409072ccea444b6f3f0ca95207f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTime: 1
+  playerPos: {fileID: 2049300385}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -3790,6 +3825,7 @@ GameObject:
   - component: {fileID: 1088448202}
   - component: {fileID: 1088448205}
   - component: {fileID: 1088448206}
+  - component: {fileID: 1088448207}
   m_Layer: 0
   m_Name: enemy (chaser)
   m_TagString: Enemy
@@ -3809,7 +3845,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566ea42292451fa4bb2a619b742515f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 3
   speed: 15
   yawSpeed: 15
 --- !u!212 &1088448203
@@ -3938,6 +3973,26 @@ PolygonCollider2D:
       - {x: 0.031071946, y: -0.5097932}
       - {x: 0.1550168, y: -0.4625588}
       - {x: 0.23498319, y: -0.3576768}
+--- !u!114 &1088448207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088448201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fde3339c8128347b965e22fb2fcef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  boatSprites:
+  - {fileID: -5809902396060664241, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: -2959609412412794004, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: 1974269271191395500, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: 3749524714591359916, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  frame: 0
 --- !u!1 &1113608200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5402,6 +5457,7 @@ GameObject:
   - component: {fileID: 2049300386}
   - component: {fileID: 2049300387}
   - component: {fileID: 2049300388}
+  - component: {fileID: 2049300390}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5493,7 +5549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 3
   speed: 2.95
-  drag: 2.74
+  drag: 1.92
   cannonball: {fileID: 7253186760697660147, guid: b964ad669e953914a97ecee7a628ab97, type: 3}
   cannonPosition: {fileID: 709112493}
   specialCannonPosition1: {fileID: 1423715130}
@@ -5559,3 +5615,23 @@ PolygonCollider2D:
       - {x: 0.031071946, y: -0.5097932}
       - {x: 0.1550168, y: -0.4625588}
       - {x: 0.23498319, y: -0.3576768}
+--- !u!114 &2049300390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049300383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fde3339c8128347b965e22fb2fcef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 2049300384}
+  boatSprites:
+  - {fileID: 4274708227734864036, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: -4701031901236237243, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: -8907606042371327085, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: -3118102174315901086, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  frame: 0
