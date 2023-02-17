@@ -328,6 +328,7 @@
 "Assets/Scripts/Actors/Player.cs"
 "Assets/Scripts/Actors/Shooter.cs"
 "Assets/Scripts/Managers/AnimationManager.cs"
+"Assets/Scripts/Managers/HealthBar.cs"
 "Assets/Scripts/Managers/SceneChanger.cs"
 "Assets/Scripts/Managers/Scroller.cs"
 -langversion:8.0

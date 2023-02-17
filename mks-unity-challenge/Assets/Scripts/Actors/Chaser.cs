@@ -11,14 +11,17 @@ public class Chaser : MonoBehaviour
     private bool isAgro;  //deve perseguir jogador
     float test;
     private Rigidbody2D chaserRigidbody;
-
+    private HealthBar healthBar;
     AnimationManager animationManager;
+
+    public float percentage;
 
     void Start()
     {
         hp = maxHp;
         chaserRigidbody = GetComponent<Rigidbody2D>();
         animationManager = GetComponent<AnimationManager>();
+        healthBar = GetComponent<HealthBar>();
     }
 
     void Update()
@@ -30,6 +33,10 @@ public class Chaser : MonoBehaviour
         hp -= damage;
 
         animationManager.ChangeSprite(4-hp);
-        print("ouch");
+        print(hp);
+        print(maxHp);
+        print(hp/maxHp);
+        percentage = hp/maxHp;
+        healthBar.UpdateVisuals(percentage);
     }
 }
