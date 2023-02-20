@@ -30,7 +30,11 @@ public class HealthBar : MonoBehaviour
         slider.transform.position = actor.transform.position + adjust;
     }
 
-    public void UpdateVisuals(float value){
-        fill.localScale = new Vector3 (value,1,1);
+    public void UpdateVisuals(float fillAmount){
+        fill.localScale = new Vector3 (fillAmount,1,1);
+    }
+
+    public void DestroyHealthBar(){
+        Destroy(slider);
     }
 }

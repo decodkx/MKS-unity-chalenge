@@ -2,41 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chaser : MonoBehaviour
+public class Chaser : Boat
 {
-    private int maxHp = 4;
-    [SerializeField] private float speed = 15, yawSpeed = 15;
+    public GameObject carcass;
+    private float percentage; //valor da vida para conduzir animacao de deterioramento
 
-    private int hp;
-    private bool isAgro;  //deve perseguir jogador
-    float test;
-    private Rigidbody2D chaserRigidbody;
-    private HealthBar healthBar;
-    AnimationManager animationManager;
-
-    public float percentage;
-
-    void Start()
-    {
-        hp = maxHp;
-        chaserRigidbody = GetComponent<Rigidbody2D>();
-        animationManager = GetComponent<AnimationManager>();
-        healthBar = GetComponent<HealthBar>();
+    public override void Destroy(){
+        
+        LeaveCarcass();
+        Destroy(this.gameObject);
     }
 
-    void Update()
-    {
-         
-    }
+    void LeaveCarcass(){
 
-    public void TakeDamage(int damage){
-        hp -= damage;
-
-        animationManager.ChangeSprite(4-hp);
-        print(hp);
-        print(maxHp);
-        print(hp/maxHp);
-        percentage = hp/maxHp;
-        healthBar.UpdateVisuals(percentage);
+        Instantiate(carcass, transform.position, transform.rotation);
     }
 }

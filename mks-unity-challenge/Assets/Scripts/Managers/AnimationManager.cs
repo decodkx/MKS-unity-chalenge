@@ -5,9 +5,9 @@ using UnityEngine;
 public class AnimationManager : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] Sprite[] boatSprites;
-    [SerializeField] private int frame;
+    private SpriteRenderer spriteRenderer;
+    public Sprite[] boatSprites;
+    private int frame;
 
     private void Start() {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();

@@ -3,23 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Boat
 {
-    [SerializeField] private int playerHealth;
-    [SerializeField] private float speed = 2.95f, drag = 2.74f; // drag armazena o valor de arrasto, quanto maior, mais lento o barco virará 
+    private new int maxHealth = 8;
+    [SerializeField] private float drag = 2.74f; // drag armazena o valor de arrasto, quanto maior, mais lento o barco virará 
+    #region CannonBallSpawnPosition   
     [SerializeField] private Cannonball cannonball;
     [SerializeField] private Transform cannonPosition;
     [SerializeField] private Transform specialCannonPosition1;
     [SerializeField] private Transform specialCannonPosition2;
     [SerializeField] private Transform specialCannonPosition3;
-    private float direction, thrust; 
-    private Rigidbody2D playerRigidbody;
+     float offset = 0.15f;
+    #endregion
 
-    //current speed and current direction 
-    void Start()
-    {
-        playerRigidbody = GetComponent<Rigidbody2D>();
-    }
+    private float direction, thrust; 
 
     // Update is called once per frame
     void Update()
@@ -27,9 +24,9 @@ public class Player : MonoBehaviour
         direction = Input.GetAxis("Horizontal");
 
         if (Input.GetKey(KeyCode.W))
-            playerRigidbody.velocity = transform.up * speed; 
+            rb.velocity = transform.up * speed; 
 
-        playerRigidbody.rotation -= direction/drag;
+        rb.rotation -= direction/drag;
 
         if (Input.GetKeyDown(KeyCode.J))
             Shoot();
@@ -40,7 +37,7 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        Vector3 pos= cannonPosition.transform.position;
+        Vector3 pos= cannonPosition.transform.position + Vector3.up*offset;
         Quaternion rotation= this.transform.rotation;
         Instantiate(cannonball,pos, rotation);
     }
@@ -53,6 +50,5 @@ public class Player : MonoBehaviour
         Instantiate(cannonball,specialCannonPosition1.transform.position, rotation);
         Instantiate(cannonball,specialCannonPosition2.transform.position, rotation);
         Instantiate(cannonball,specialCannonPosition3.transform.position, rotation);
-
     }
 }
