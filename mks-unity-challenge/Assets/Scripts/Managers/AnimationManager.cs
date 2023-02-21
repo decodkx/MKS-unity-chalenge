@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-    [SerializeField] Animator animator;
     private SpriteRenderer spriteRenderer;
     public Sprite[] boatSprites;
     private int frame;

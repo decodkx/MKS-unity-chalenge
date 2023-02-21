@@ -17,7 +17,7 @@ public class EnemyBehavior : MonoBehaviour
 
     //States
     public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public bool playerInSightRange, playerInAttackRange, obstacleOnTheWay;
 
     private void Start()
     {
@@ -28,7 +28,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Update()
     {
-        //Check for sight and attack range
+        //obstacleOnTheWay = Physics2D.OverlapLin
         playerInSightRange = Physics2D.OverlapCircle(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, whatIsPlayer);
 
@@ -43,9 +43,6 @@ public class EnemyBehavior : MonoBehaviour
         _rigidbody.velocity = transform.up * 2.95f;
     }
 
-    private void ExplodePlayer(){
-
-    }
     private void ShootPlayer()
     {
         transform.up = player.position - transform.position;
