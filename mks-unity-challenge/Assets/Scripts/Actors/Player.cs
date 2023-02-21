@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Player : Boat
 {
-    private new int maxHealth = 8;
     [SerializeField] private float drag = 2.74f; // drag armazena o valor de arrasto, quanto maior, mais lento o barco virará 
     #region CannonBallSpawnPosition   
     [SerializeField] private Cannonball cannonball;

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shooter : Chaser 
 {
-    //public static Shooter shooter;
     [SerializeField] private Transform cannonPosition;
     [SerializeField] private Cannonball cannonball;
     float offset = 0.15f;

@@ -10,13 +10,6 @@ public class EnemyBehavior : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public float health;
-
-    //Patroling
-    public Vector3 walkPoint;
-    bool walkPointSet;
-    public float walkPointRange;
-
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
@@ -30,7 +23,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
-        if(this.gameObject.name == "Enemy (shooter)") enemyShooter = gameObject.GetComponent<Shooter>();
+        if(gameObject.GetComponent<Shooter>() != null) enemyShooter = gameObject.GetComponent<Shooter>();
     }
 
     private void Update()

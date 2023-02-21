@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boat : MonoBehaviour
 {
-    public int maxHealth = 4;
+    [SerializeField] public int maxHealth = 4;
     public int health;
     [SerializeField] public float speed = 3.4f;
 
@@ -15,7 +15,6 @@ public class Boat : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        print(this.gameObject);
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         animationManager = GetComponent<AnimationManager>();
         healthBar = GetComponent<HealthBar>();
