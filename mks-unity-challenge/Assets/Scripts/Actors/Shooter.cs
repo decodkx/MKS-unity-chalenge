@@ -9,7 +9,7 @@ public class Shooter : Chaser
     float offset = 0.15f;
     void Update()
     {
-        
+       
     }
 
     public void Shoot(){
@@ -17,4 +17,6 @@ public class Shooter : Chaser
         Quaternion rotation= this.transform.rotation;
         Instantiate(cannonball,pos, rotation);
     }
+
+    private void OnCollisionEnter2D(Collision2D other) {}
 }

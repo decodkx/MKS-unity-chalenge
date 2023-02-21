@@ -27,7 +27,6 @@ public class Chaser : Boat
                 Vector3 position = transform.position + new Vector3(UnityEngine.Random.Range(-0.15f, 0.15f), UnityEngine.Random.Range(0.50f, 0.50f), 0);
                 StartCoroutine(ExplodeItself(position,delay));
                 delay += 0.3f;
-                //Kamikase(position);
             }
             Destroy();
         }
@@ -38,10 +37,5 @@ public class Chaser : Boat
         Instantiate(explosion, position, transform.rotation);
 
         yield return new WaitForSeconds(delay);
-    }
-
-    void Kamikase(Vector3 position)
-    {        
-        Instantiate(explosion, position, transform.rotation);
     }
 }

@@ -6,7 +6,7 @@ public class Boat : MonoBehaviour
 {
     [SerializeField] public int maxHealth = 4;
     public int health;
-    [SerializeField] public float speed = 3.4f;
+    [SerializeField] public float speed = 2.8f;
 
     public Rigidbody2D rb;
     public HealthBar healthBar;
