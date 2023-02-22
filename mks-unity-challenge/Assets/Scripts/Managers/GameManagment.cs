@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManagment : MonoBehaviour
 {
     public static GameManagment gameManager;
-    private int matchTime;
-    void Awake()
+    private int matchTime = 120;
+    void Awake() 
     {
         if(gameManager == null) {
             DontDestroyOnLoad (this);
