@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 4100371274685343543}
   - component: {fileID: 4100371274685343540}
   - component: {fileID: 4100371274685343541}
+  - component: {fileID: 7019768098276955824}
   m_Layer: 9
   m_Name: Enemy (shooter)
   m_TagString: Enemy
@@ -162,7 +163,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -944468271
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4030218682350969340, guid: 8492c56f72163be46a759132daf60837, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -188,10 +189,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   health: 0
-  speed: 15
+  points: 100
+  speed: 2.8
   rb: {fileID: 0}
   healthBar: {fileID: 0}
-  animationManager: {fileID: 0}
   carcass: {fileID: 8699175802151815789, guid: 2b0f1da49166bda459ef91717c1e12f5, type: 3}
   explosion: {fileID: 0}
   cannonPosition: {fileID: 4100371275534205706}
@@ -209,9 +210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 16
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -220,17 +218,16 @@ MonoBehaviour:
     m_Bits: 8
   opCathetus: 1
   expand: 1
-  needle: {fileID: 0}
+  needle: {fileID: 715592212}
   timeBetweenAttacks: 4
   enemyShooter: {fileID: 0}
-  sightRange: 10
-  attackRange: 3
+  sightRange: 16
+  attackRange: 4.2
   playerInSightRange: 0
   playerInAttackRange: 0
   obstacleOnTheWay1: 0
   obstacleOnTheWay2: 0
   obstacleOnTheWay3: 0
-  stopTrying: 0
 --- !u!50 &4100371274685343542
 Rigidbody2D:
   serializedVersion: 4
@@ -321,6 +318,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderPrefab: {fileID: 5773216680401056551, guid: d185483ca7c1720478b4bed5c337b614, type: 3}
+--- !u!114 &7019768098276955824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4100371274685343538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c38fe939955e114ea02c512eb242d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boat: {fileID: 0}
+  ripple: {fileID: 1783041211683301138, guid: cbe4c32fe9dbea541b70f066fb228fc1, type: 3}
+  distance: 0.6
 --- !u!1 &4100371275534205701
 GameObject:
   m_ObjectHideFlags: 0

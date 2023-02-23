@@ -6,16 +6,16 @@ using UnityEngine;
 public class Player : Boat
 {
     [SerializeField] private float drag = 2.74f; // drag armazena o valor de arrasto, quanto maior, mais lento o barco virará 
+
     #region CannonBallSpawnPosition   
     [SerializeField] private Cannonball cannonball;
     [SerializeField] private Transform cannonPosition;
     [SerializeField] private Transform specialCannonPosition1;
     [SerializeField] private Transform specialCannonPosition2;
     [SerializeField] private Transform specialCannonPosition3;
-     float offset = 0.15f;
     #endregion
 
-    private float direction, thrust; 
+    private float direction, thrust;
 
     // Update is called once per frame
     void Update()
@@ -36,7 +36,7 @@ public class Player : Boat
 
     private void Shoot()
     {
-        Vector3 pos= cannonPosition.transform.position + Vector3.up*offset;
+        Vector3 pos= cannonPosition.transform.position;// + Vector3.up*offset;
         Quaternion rotation= this.transform.rotation;
         Instantiate(cannonball,pos, rotation);
     }

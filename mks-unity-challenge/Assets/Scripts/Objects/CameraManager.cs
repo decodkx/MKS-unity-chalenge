@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraManager : MonoBehaviour
 {
     [SerializeField] private float smoothTime = 0.3F;
     [SerializeField] private Transform playerPos; 

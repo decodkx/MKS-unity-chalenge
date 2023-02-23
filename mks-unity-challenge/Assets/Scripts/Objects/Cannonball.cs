@@ -26,6 +26,11 @@ public class Cannonball : MonoBehaviour
             Explode();
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if(other.CompareTag("Finish"))
+            Destroy(this.gameObject);
+    }
     void Explode(){
         Quaternion rotation= this.transform.rotation;
         Instantiate(explosion ,transform.position, rotation);

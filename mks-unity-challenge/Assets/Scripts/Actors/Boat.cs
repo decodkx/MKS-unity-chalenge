@@ -6,11 +6,12 @@ public class Boat : MonoBehaviour
 {
     [SerializeField] public int maxHealth = 4;
     public int health;
+    public int points;
     [SerializeField] public float speed = 2.8f;
 
     public Rigidbody2D rb;
     public HealthBar healthBar;
-    public AnimationManager animationManager;
+    AnimationManager animationManager;
     private float percentage; //valor da vida para conduzir animacao de deterioramento
     void Start()
     {
@@ -20,7 +21,7 @@ public class Boat : MonoBehaviour
         healthBar = GetComponent<HealthBar>();
     }
 
-        public void TakeDamage(int damage){
+    public void TakeDamage(int damage){
         health -= damage;
 
         percentage = ((float)health/maxHealth);
@@ -36,6 +37,9 @@ public class Boat : MonoBehaviour
     }
 
     public virtual void Destroy(){
+        if(this.gameObject.name == "Player")
+            GameManagment.gameManager.EndGame(false);
+
         Destroy(this.gameObject);
     }
 }
