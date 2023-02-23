@@ -18884,6 +18884,7 @@ GameObject:
   - component: {fileID: 2049300387}
   - component: {fileID: 2049300388}
   - component: {fileID: 2049300390}
+  - component: {fileID: 2049300391}
   - component: {fileID: 2049300389}
   m_Layer: 8
   m_Name: Player
@@ -19081,6 +19082,21 @@ MonoBehaviour:
   - {fileID: -4701031901236237243, guid: 8492c56f72163be46a759132daf60837, type: 3}
   - {fileID: 4274708227734864036, guid: 8492c56f72163be46a759132daf60837, type: 3}
   - {fileID: 4274708227734864036, guid: 8492c56f72163be46a759132daf60837, type: 3}
+--- !u!114 &2049300391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049300383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c38fe939955e114ea02c512eb242d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boat: {fileID: 0}
+  ripple: {fileID: 1783041211683301138, guid: cbe4c32fe9dbea541b70f066fb228fc1, type: 3}
+  distance: 0.6
 --- !u!1001 &3475391431347068986
 PrefabInstance:
   m_ObjectHideFlags: 0

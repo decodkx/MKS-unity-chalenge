@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 4100371274685343543}
   - component: {fileID: 4100371274685343540}
   - component: {fileID: 4100371274685343541}
+  - component: {fileID: 7019768098276955824}
   m_Layer: 9
   m_Name: Enemy (shooter)
   m_TagString: Enemy
@@ -317,6 +318,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderPrefab: {fileID: 5773216680401056551, guid: d185483ca7c1720478b4bed5c337b614, type: 3}
+--- !u!114 &7019768098276955824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4100371274685343538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c38fe939955e114ea02c512eb242d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boat: {fileID: 0}
+  ripple: {fileID: 1783041211683301138, guid: cbe4c32fe9dbea541b70f066fb228fc1, type: 3}
+  distance: 0.6
 --- !u!1 &4100371275534205701
 GameObject:
   m_ObjectHideFlags: 0
