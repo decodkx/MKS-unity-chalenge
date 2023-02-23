@@ -31,7 +31,7 @@ public class Boat : MonoBehaviour
         }
 
         if(health < 1){
-            Invoke(nameof(Destroy),0.5f);
+            Invoke(nameof(Destroy),0.2f);
             return;
         }    
     }

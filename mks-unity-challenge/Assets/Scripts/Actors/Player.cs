@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : Boat
 {
-    private float drag = 2.55f; // drag armazena o valor de arrasto, quanto maior, mais lento o barco virará 
+    public float drag = 0.45f; // drag armazena o valor de arrasto, quanto maior, mais lento o barco virará 
 
     #region CannonBallSpawnPosition   
     [SerializeField] private Cannonball cannonball;
@@ -19,7 +19,7 @@ public class Player : Boat
     private float direction, thrust;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         direction = Input.GetAxis("Horizontal");
 

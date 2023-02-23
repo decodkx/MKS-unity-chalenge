@@ -34,7 +34,7 @@ public class EnemyBehavior : MonoBehaviour
         speed = gameObject.GetComponent<Boat>().speed;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         //obstacleOnTheWay = Physics2D.OverlapLin
         playerInSightRange = Physics2D.OverlapCircle(transform.position, sightRange, whatIsPlayer);
