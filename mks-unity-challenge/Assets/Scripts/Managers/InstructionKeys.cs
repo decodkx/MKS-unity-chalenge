@@ -24,15 +24,15 @@ public class InstructionKeys : MonoBehaviour
         //botoes pressionados
         if(Input.GetKeyDown(KeyCode.W)){
             images[0].sprite = sprites[5];
-            texts[0].text = "Movimenta-se para a frente";
+            texts[0].text = "Impulsiona a embarcação para frente";
         }
         if(Input.GetKeyDown(KeyCode.A)){
             images[1].sprite = sprites[6];
-            texts[1].text = "Rotaciona o barco  para a esquerda";
+            texts[1].text = "Rotaciona o barco para a esquerda";
         }
         if(Input.GetKeyDown(KeyCode.D)){
             images[2].sprite = sprites[7];
-            texts[2].text = "Rotaciona o barco  para a direita";
+            texts[2].text = "Rotaciona o barco para a direita";
         }
         if(Input.GetKeyDown(KeyCode.J)){
             images[3].sprite = sprites[8];
