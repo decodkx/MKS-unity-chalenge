@@ -7,7 +7,7 @@ public class RippleEffect : MonoBehaviour
     public Boat boat;
     public GameObject ripple;
     public float distance = 0.6f;
-    float maxTime = 0.3f;
+    float maxTime = 0.25f;
     float time;
 
     void Start()
