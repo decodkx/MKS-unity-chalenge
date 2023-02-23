@@ -9,7 +9,7 @@ public class GameManagment : MonoBehaviour
     private bool won = true;
     private int score;
     private int matchTime = 120;
-    private int spawnInterval = 30;
+    private int spawnInterval = 10;
     void Awake() 
     {
         if(gameManager == null) {

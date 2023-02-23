@@ -29,7 +29,6 @@ public class RippleEffect : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0)
         {
-            print("apsodk");
             Instantiate(ripple, transform.position + DegreeToVector(transform.eulerAngles.z - 90) * distance, boat.transform.rotation);
             time = maxTime;
         }

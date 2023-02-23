@@ -13,7 +13,6 @@ public class Player : Boat
     [SerializeField] private Transform specialCannonPosition1;
     [SerializeField] private Transform specialCannonPosition2;
     [SerializeField] private Transform specialCannonPosition3;
-     float offset = 0.15f;
     #endregion
 
     private float direction, thrust;
