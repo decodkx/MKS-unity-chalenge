@@ -162,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -944468271
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4030218682350969340, guid: 8492c56f72163be46a759132daf60837, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -188,10 +188,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   health: 0
-  speed: 15
+  points: 100
+  speed: 2.8
   rb: {fileID: 0}
   healthBar: {fileID: 0}
-  animationManager: {fileID: 0}
   carcass: {fileID: 8699175802151815789, guid: 2b0f1da49166bda459ef91717c1e12f5, type: 3}
   explosion: {fileID: 0}
   cannonPosition: {fileID: 4100371275534205706}
@@ -209,9 +209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 16
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -220,7 +217,7 @@ MonoBehaviour:
     m_Bits: 8
   opCathetus: 1
   expand: 1
-  needle: {fileID: 0}
+  needle: {fileID: 715592212}
   timeBetweenAttacks: 4
   enemyShooter: {fileID: 0}
   sightRange: 10
@@ -230,7 +227,6 @@ MonoBehaviour:
   obstacleOnTheWay1: 0
   obstacleOnTheWay2: 0
   obstacleOnTheWay3: 0
-  stopTrying: 0
 --- !u!50 &4100371274685343542
 Rigidbody2D:
   serializedVersion: 4

@@ -9,6 +9,8 @@ public class Chaser : Boat
     [SerializeField] private Explosion explosion;
     public override void Destroy(){
         healthBar.DestroyHealthBar();
+        GameManagment.gameManager.AddScore(points);
+        
         LeaveCarcass();
         Destroy(this.gameObject);
     }
@@ -18,7 +20,7 @@ public class Chaser : Boat
         Instantiate(carcass, transform.position, transform.rotation);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other) {    //tira vida do player, invoca tres explosoes e impede player de ganhar pontos por essa morte
         if(other.gameObject.layer == 8){
             other.gameObject.GetComponent<Boat>().TakeDamage(2);
             float delay = 0;
@@ -28,6 +30,7 @@ public class Chaser : Boat
                 StartCoroutine(ExplodeItself(position,delay));
                 delay += 0.3f;
             }
+            points = 0;
             Destroy();
         }
     }

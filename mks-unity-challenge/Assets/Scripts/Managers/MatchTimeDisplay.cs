@@ -6,17 +6,23 @@ using UnityEngine.UI;
 
 public class MatchTimeDisplay : MonoBehaviour
 {
-    [SerializeField] Slider slider;
-    [SerializeField] TMP_Text mText;
+    [SerializeField] Slider duration_slider;
+    [SerializeField] TMP_Text duration_text;
+
+    [SerializeField] Slider spawn_slider;
+    [SerializeField] TMP_Text spawn_text;
     void Start()
     {
-        slider.value = GameManagment.gameManager.GetTimer();
+        duration_slider.value = GameManagment.gameManager.GetTimer();
+        spawn_slider.value = GameManagment.gameManager.GetInterval();
     }
 
     // Update is called once per frame
     void Update()
     {
-        mText.text = $"Tempo de partida: {(int)slider.value/60}:{(slider.value%60).ToString("00")} min";
-        GameManagment.gameManager.SetTimer((int)slider.value);
+        duration_text.text = $"Tempo de partida: {(int)duration_slider.value/60}:{(duration_slider.value%60).ToString("00")} min";
+        spawn_text.text = $"Intervalo do spawn: {(spawn_slider.value).ToString()} s";
+        GameManagment.gameManager.SetTimer((int)duration_slider.value);
+        GameManagment.gameManager.SetInterval((int)spawn_slider.value);
     }
 }

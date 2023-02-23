@@ -161,7 +161,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -944468271
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5809902396060664241, guid: 8492c56f72163be46a759132daf60837, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -187,10 +187,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   health: 0
-  speed: 2.8
+  points: 200
+  speed: 2.1
   rb: {fileID: 0}
   healthBar: {fileID: 0}
-  animationManager: {fileID: 0}
   carcass: {fileID: 8699175802151815789, guid: ce9a61789464db8488d303fdaa5768e2, type: 3}
   explosion: {fileID: 5545668184683958397, guid: 14bcff1f044c17d46a82747e24bc1908, type: 3}
 --- !u!114 &3475391430258624235
