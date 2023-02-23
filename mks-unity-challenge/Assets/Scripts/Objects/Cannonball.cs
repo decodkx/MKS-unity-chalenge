@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cannonball : MonoBehaviour
 {
     private float speed = 11f;
-    private int damage = 1;
+    public int damage = 1;
     [SerializeField] private GameObject explosion;
     public int target;
 

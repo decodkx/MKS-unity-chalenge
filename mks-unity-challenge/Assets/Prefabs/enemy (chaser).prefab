@@ -218,7 +218,7 @@ MonoBehaviour:
   needle: {fileID: 1485324401580358079}
   timeBetweenAttacks: 0
   enemyShooter: {fileID: 0}
-  sightRange: 10
+  sightRange: 19
   attackRange: 0
   playerInSightRange: 0
   playerInAttackRange: 0

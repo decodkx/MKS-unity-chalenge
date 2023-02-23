@@ -34,7 +34,7 @@ public class EnemyBehavior : MonoBehaviour
         speed = gameObject.GetComponent<Boat>().speed;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //obstacleOnTheWay = Physics2D.OverlapLin
         playerInSightRange = Physics2D.OverlapCircle(transform.position, sightRange, whatIsPlayer);
@@ -136,7 +136,7 @@ public class EnemyBehavior : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         //Alcance dos inimigos
         Gizmos.color = Color.red;
