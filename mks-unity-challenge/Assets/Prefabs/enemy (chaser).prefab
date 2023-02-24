@@ -163,7 +163,7 @@ SpriteRenderer:
   m_SortingLayerID: -944468271
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5809902396060664241, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  m_Sprite: {fileID: 4089074951545405423, guid: 8492c56f72163be46a759132daf60837, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -298,11 +298,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatSprites:
-  - {fileID: 3749524714591359916, guid: 8492c56f72163be46a759132daf60837, type: 3}
-  - {fileID: 1974269271191395500, guid: 8492c56f72163be46a759132daf60837, type: 3}
-  - {fileID: -2959609412412794004, guid: 8492c56f72163be46a759132daf60837, type: 3}
-  - {fileID: -5809902396060664241, guid: 8492c56f72163be46a759132daf60837, type: 3}
-  - {fileID: -5809902396060664241, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: -8017263859009443164, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: -5899135318727279605, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: -830966665638463786, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: 4089074951545405423, guid: 8492c56f72163be46a759132daf60837, type: 3}
+  - {fileID: 4089074951545405423, guid: 8492c56f72163be46a759132daf60837, type: 3}
 --- !u!114 &3475391430258624234
 MonoBehaviour:
   m_ObjectHideFlags: 0

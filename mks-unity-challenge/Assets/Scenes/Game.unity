@@ -52938,7 +52938,7 @@ MonoBehaviour:
   speed: 3.13
   rb: {fileID: 0}
   healthBar: {fileID: 0}
-  drag: 1.61
+  drag: 0.5
   cannonball: {fileID: 7760786222018856695, guid: b964ad669e953914a97ecee7a628ab97, type: 3}
   lesserCannonball: {fileID: 7760786222018856695, guid: 5fcdf081a83d7234aba7af7a345dd274, type: 3}
   cannonPosition: {fileID: 709112493}
